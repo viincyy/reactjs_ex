@@ -1,0 +1,16 @@
+- SERVER SITE RENDERING: Trả về nhiều thẻ html trong page source, website load lại 
+- CLIENT SITE RENDERING: Trả về ít thẻ html trong page source, website không load lại. Trả về div trống, đọc file JS, thực thi -> render ra trang web
+
+ƯU ĐIỂM:
+- CLIENT
+    + Trang web không bị load lại nhiều lần
+- SERVER
+    + Tối ưu việc SEO
+    + Lượt truy cập đầu tiên nhanh 
+
+NHƯỢC ĐIỂM
+- CLIENT:
+    + Không tối ưu SEO
+    + Lượt truy cập đầu tiên chậm 
+- SERVER 
+    + Reload lại trang nhiều 
