@@ -1,12 +1,14 @@
-import { Invoice, Payment } from './classImplementInterface';
-import { hasPrint } from './interfaceForClass';
+// GENERICS
 
-const documentOne: hasPrint =  new Invoice('Vinamilk', 'drink milk', 50000000);
-const documentTwo: hasPrint = new Payment('Vietam airline', 'fly', 25000000);
+type strArray = Array<string>
+type numArray = Array<number>
 
-const allDocuments: hasPrint[] = [];
+const last = (arr: Array<number>) => arr[arr.length - 1]
 
-allDocuments.push(documentOne);
-allDocuments.push(documentTwo);
+// const l1 = last[1]
+// console.log(l1)
 
-console.log(allDocuments);
+const lastT = <T>(arr: Array<T>) => arr[arr.length - 1]
+const l3 = lastT([1, 2, 3]);
+const l4 = lastT(['a', 'b']);
+console.log(l4)
