@@ -1,5 +1,14 @@
-"use strict";
-exports.__esModule = true;
-var class_1 = require("./class");
-var nam = new class_1.Employee('N', 24, true);
-console.log(nam);
+var henry = {
+    name: 'Henry',
+    age: 30,
+    speak: function (lang) {
+        console.log(lang);
+    },
+    spend: function (amt) {
+        return amt;
+    }
+};
+var helloPerson = function (person) {
+    console.log("Helloo " + person.name);
+};
+helloPerson(henry);
