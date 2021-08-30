@@ -2,11 +2,11 @@ import React from 'react';
 
 const TodoForm = () => {
     return (
-        <div className='form'>
+        <div>
             <form>
                 <input type='text' />
                 <input type='submit' value='Add' />
-            </form> 
+            </form>
         </div>
     );
 };

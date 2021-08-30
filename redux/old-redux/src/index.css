@@ -12,8 +12,8 @@
  
  /* Todos */
  .todo-list ul {
-    padding: 0 10px 10px 10px;
     list-style-type: none;
+    padding-left: 0px !important;
 }
 
 .todo-list li {
@@ -23,6 +23,7 @@
     border-radius: 4px;
     background: rgb(240, 240, 240);
     color: black;
+    list-style: none;
 }
 
 .todo-list li input[type='checkbox'] {
