@@ -1,5 +1,5 @@
 import Layout from '../../components/Layout';
-import { getPostById, getPostIds } from '../../lib/Post';
+import { getPostById, getPostIds } from '../../lib/post';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Link from 'next/link';
