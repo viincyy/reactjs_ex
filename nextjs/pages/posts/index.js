@@ -7,7 +7,7 @@ const Posts = ({ posts }) => {
     return (
         <Layout>
             {posts.map((post) => (
-                <Card key={post.id}>
+                <Card key={post.id} className='my-3 shadow'>
                     <Card.Body>
                         <Card.Title>{post.title}</Card.Title>
                         <Card.Text>{post.body}</Card.Text>
