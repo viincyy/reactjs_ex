@@ -1,0 +1,4 @@
+- getStaticPaths
+    + Lấy dữ liệu tĩnh (ai cũng có thể nhìn thấy) nhưng phụ thuộc vào path params
+- getStaticProps
+    + Lấy dữ liệu tĩnh (ai cũng có thể nhìn thấy) không phụ thuộc 
