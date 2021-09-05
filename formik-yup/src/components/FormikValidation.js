@@ -29,11 +29,32 @@ const FormikValidation = () => {
     };
     return (
         <Formik
-            initialValues={initialValue}
-            validate={handleValidate}
-            onSubmit={handleSubmit}
+            initialValues={{
+                email: '',
+                password: '',
+            }}
+            validate={(values) => {
+                const errors = {};
+                const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,}$/i;
+                if (!values.email) {
+                    errors.email = 'Required';
+                } else if (
+                    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,}$/i.test(
+                        values.email
+                    )
+                ) {
+                    errors.email = 'Invalid Email Address';
+                }
+                return errors;
+            }}
+            onSubmit={(values, { setSubmitting }) => {
+                setTimeout(() => {
+                    alert(JSON.stringify(values, null, 2));
+                    setSubmitting(false);
+                }, 400);
+            }}
         >
-            {({ isSubmitting }) => {
+            {({ isSubmitting }) => (
                 <Form>
                     <Field type='email' name='email' />
                     <ErrorMessage name='email' component='div' />
@@ -42,8 +63,8 @@ const FormikValidation = () => {
                     <button type='submit' disabled={isSubmitting}>
                         Submit
                     </button>
-                </Form>;
-            }}
+                </Form>
+            )}
         </Formik>
     );
 };
