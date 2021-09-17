@@ -8,7 +8,7 @@
 - Thuộc tính tĩnh: Dùng để khai báo biến toàn cục cho một lớp
 - Hàm tĩnh: Giúp truy xuất đến hàm mọi lúc mọi nơi
 
-- DESIGN PATTERN(CREATIONAL, STRUCTURAL, BEHAVIORAL)
+- DESIGN PATTERN  
 
 * TỪ KHÓA THIS
 - Tham chiếu đến instance của class hiện tại
@@ -16,8 +16,8 @@
 
 
 *4 Tính chất của lập trình hướng đối tượng
-- Tính đóng gói: Tính đóng gói cho phép che giấu thông tin và những tính chất xử lý bên trong của đối tượng. Các đối tượng khác không thể tác động trực tiếp lên dữ liệu và thay đổi trạng thái của đối tượng mà bắt buột phải thông qua các phương thức công khai do đối tượng đó cung cấp.
-- Tính kế thừa: Tính kế thừa cho phép xây dựng một lớp mới, kế thừa và tái sử dụng các thuộc tính, phương thức của lớp cũ đã có trước đó.
+- Tính đóng gói: Tính đóng gói cho phép che giấu thông tin và những tính chất xử lý bên trong của đối tượng. Các đối tượng khác không thể tác động trực tiếp lên dữ liệu và thay đổi trạng thái của đối tượng mà bắt buộc phải thông qua các phương thức công khai do đối tượng đó cung cấp.
+- Tính kế thừa: Tính kế  thừa cho phép xây dựng một lớp mới, kế thừa và tái sử dụng các thuộc tính, phương thức của lớp cũ đã có trước đó.
 - Tính đa hình: 
     + Cho phép các đối tượng khác nhau thực thi những chức năng giống nhau theo những cách khác nhau.
 (Anima l(Speak), Dog(Speak), Cat(Speak))
@@ -38,21 +38,33 @@
         - Thay đổi hành vi của phương thức 
         - Số lượng và kiểu dữ liệu của tham số phải giống nhau.
         - Xảy ra trong 2 class có quan hệ kế thừa
-- Tính trừu tượng:
-    - Abstract class: Chứa một hàm thuần ảo, không thể tạo đối tượng trong lớp trừu tượng, chỉ dùng để kế thừa
-    - Interface: Là một class, không chứa thuộc tính, chỉ chứa hàm thuần ảo, là bảng mô tả tất cả các hành động mà một đối tượng có thể làm
+
+
+- Tính trừu tượng: Dùng để chỉ quá trình ẩn việc triển khai thực tế của một ứng dụng, thay vào đó là nhấn mạnh cách sử dụng chúng.
+
     * Phân biệt ABSTRACT CLASS && INTERFACE
+
     Giống: Không thể tạo đối tượng từ Interface, Abstract Class
 
     Khác: 
-        ABSTRACT CLASS
-    - Chứa một hàm thuần ảo 
+        ABSTRACT CLASS (ABSTRACT CLASS là gì?)
+    - Chứa phương thức ảo, có thể có phương thức thường 
     - Không hỗ trợ đa kế thừa 
-    - Có các biến static, non-static, final, non-final 
-    - Có thể cài đặt nội dung phương thức của Interface 
+    - Mọi phương thức, thuộc tính có thể xác định access modifier
+    - Có thể cài đặt phương thức của Interface 
 
-        INTERFACE
-    - Chỉ chứa hàm thuần ảo 
+        INTERFACE (INTERFACE là gì?)
+    - Chỉ chứa phương thức ảo 
     - Hỗ trợ đa kế thừa 
-    - Có các biến static, final 
-    - Không thể cài đặt nội dung phương thức của Abstract Class 
+    - Mọi phương thức, thuộc tính mặc định là public
+    - Mọi phương thức cần được implement từ class
+
+* Khi nào dùng Interface 
+    - Khi cung cấp các chức năng chung cho các lớp không liên quan 
+    - Khi nhóm các đối tượng dựa trên các hành vi phổ biến
+    - Cần sử dụng đa hình vì một lớp có thể thực hiện nhiều Interfaces 
+
+* Khi nào dùng ABSTRACT CLASS
+    - Khi cần sử dụng kế thừa
+    - Khi cần cung cấp các phương thức mặc định cũng như các phương thức phổ biến mà nhiều lớp dẫn xuất có thể thực thi và ghi đè
+    - Cần tạo nhiều phiên bản cho các thành phần. Vì khi thêm các thuộc tính, phương thức vào abstract class sẽ không vi phạm mã và các lớp dẫn xuất được tự động cập nhật
